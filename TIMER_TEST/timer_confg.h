@@ -31,6 +31,11 @@ typedef enum
 	NO_CLOCK,F_CPU_CLOCK,F_CPU_8,F_CPU_64,F_CPU_256,F_CPU_1024,MAX_CLK
 }Icu_Clock;
 
+typedef enum
+{
+	T2_NO_CLOCK,T2_F_CPU_CLOCK,T2_F_CPU_8,T2_F_CPU_32,T2_F_CPU_64,T2_F_CPU_128,T2_F_CPU_256,T2_F_CPU_1024,MAX_T2_CLK
+}Icu_T2_Clock;
+
 //output compare reg./*
 /*#define ctc		       0
 #define pwm			   1
@@ -70,7 +75,7 @@ typedef enum
 
 #define NA			0xff
 #define T1_MAX      0XFFFF
-#define T_MAX       0XFF
+#define T_MAX       256
 
 #define INITIALIZED			1
 #define NOT_INITIALIZED		0
@@ -78,9 +83,9 @@ typedef struct
 {
 	UINT8 TIMER;
 	UINT8 MODE;
-	/*UINT8 OUTPUT_PINS;*/
-	/*COMPARE_BITS COMPARE_COND1 ;
-	COMPARE_BITS COMPARE_COND2 ;
+	UINT8 OUTPUT_PINS;
+	COMPARE_BITS COMPARE_COND1 ;
+	/*COMPARE_BITS COMPARE_COND2 ;
 	*/UINT8 O_C_R1;
 	/*UINT16 O_C_R2;*/
 	/*UINT16 ICR;*/

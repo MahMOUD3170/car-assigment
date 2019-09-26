@@ -5,7 +5,7 @@
 
 unsigned char g_tick = 0;
 
-ISR(TIMER0_COMP_vect)
+ISR(TIMER2_OVF_vect)
 {
 	g_tick++;
 	if(g_tick == NUMBER_OF_OVERFLOWS_PER_HALF_SECOND)
@@ -27,7 +27,9 @@ int main(void)
 	DDRC  |= (1<<PC0); //configure the led pin to be output pin.
 	PORTC &= ~(1<<PC0); //LED is off at the beginning(Positive Logic).
 	SREG  |= (1<<7); //enable global interrupts in MC by setting the I-Bit.
-	 TIMER_init (); //start the timer.
+	 //start the timer.
+
+	TIMER_init ();
     while(1)
     {
 

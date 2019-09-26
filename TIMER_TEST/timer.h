@@ -9,5 +9,5 @@
 #endif
 typedef enum{NOK,OK}Std_Func_t;
 Std_Func_t TIMER_init (void);
-void timer0_init_normal_mode(void);
+
 #endif

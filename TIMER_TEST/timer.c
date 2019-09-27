@@ -68,7 +68,7 @@ Std_Func_t TIMER_init (void)
 				}
 				else if(TIMER_cnfg_arr[loop_index].INTERUPT == int_not_active)
 				{
-					TIMSK &=~ (1<<TOIE1);
+					TIMSK &=~ (1<<TOIE0);
 				}
 				else
 				{

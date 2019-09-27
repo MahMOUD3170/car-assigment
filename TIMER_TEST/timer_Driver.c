@@ -1,3 +1,6 @@
+
+
+/*THIS IS DUMMY APP TO TEST TIMER DRIVE*/
 #include "timer.h"
 #include <avr/interrupt.h>
 
